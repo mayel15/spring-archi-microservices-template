@@ -1,0 +1,47 @@
+version: "3.5"
+services:
+
+  config-server:
+    image: config-file-server
+    restart: always
+    build:
+      context: ./config-server
+      dockerfile: Dockerfile
+    expose:
+      - 9101
+    ports:
+      - 9101:9101
+    
+  eureka-server:
+    image: eureka-server
+    restart: always
+    build:
+      context: ./eureka-server
+      dockerfile: Dockerfile
+    expose:
+      - 9102
+    ports:
+      - 9102:9102
+    depends_on:
+      - config-file-server
+    environment:
+      spring.cloud.config.uri: http://config-file-server:9101
+      EUREKA_HOST: eureka-server
+
+  pgdb:
+    image: postgres:16
+    container_name: db-senwata
+    hostname: postgres_db
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=senwata
+      - POSTGRES_HOST_AUTH_METHOD=trust
+    expose:
+      - 5432
+    ports:
+      - 5435:5432/tcp
+    volumes:
+      - "./pg_db:/var/lib/postgresql/data"
+
+  
