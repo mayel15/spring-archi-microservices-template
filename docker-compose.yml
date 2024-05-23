@@ -2,7 +2,7 @@ version: "3.5"
 services:
 
   config-server:
-    image: config-file-server
+    image: config-server
     restart: always
     build:
       context: ./config-server
@@ -23,9 +23,9 @@ services:
     ports:
       - 9102:9102
     depends_on:
-      - config-file-server
+      - config-server
     environment:
-      spring.cloud.config.uri: http://config-file-server:9101
+      spring.cloud.config.uri: http://config-server:9101
       EUREKA_HOST: eureka-server
 
   pgdb:
@@ -59,7 +59,7 @@ services:
       - eureka-server
       - pgdb
     environment:
-      spring.cloud.config.uri: http://config-file-server:9101
+      spring.cloud.config.uri: http://config-server:9101
       POSTGRES_HOST: pgdb
       POSTGRES_PORT: 5432
       EUREKA_HOST: eureka-server
