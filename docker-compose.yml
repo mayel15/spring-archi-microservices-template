@@ -44,4 +44,25 @@ services:
     volumes:
       - "./pg_db:/var/lib/postgresql/data"
 
+  user-microservice:
+    image: user-microservice
+    restart: always
+    build:
+      context: ./user-microservice
+      dockerfile: Dockerfile
+    expose:
+      - 8080
+    ports:
+      - 8080:8080
+    depends_on:
+      - config-server
+      - eureka-server
+      - pgdb
+    environment:
+      spring.cloud.config.uri: http://config-file-server:9101
+      POSTGRES_HOST: pgdb
+      POSTGRES_PORT: 5432
+      EUREKA_HOST: eureka-server
+
+
   
