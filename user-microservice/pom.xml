@@ -8,11 +8,11 @@
 		<version>3.2.5</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.senwata</groupId>
+	<groupId>com.template</groupId>
 	<artifactId>user-microservice</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>user-microservice</name>
-	<description>user microservice for senwata backend</description>
+	<description>user microservice for template backend</description>
 	<properties>
 		<java.version>17</java.version>
 		<spring-cloud.version>2023.0.1</spring-cloud.version>

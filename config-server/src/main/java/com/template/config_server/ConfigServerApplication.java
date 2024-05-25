@@ -1,4 +1,4 @@
-package com.senwata.config_server;
+package com.template.config_server;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

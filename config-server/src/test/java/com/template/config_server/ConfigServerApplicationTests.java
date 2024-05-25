@@ -1,10 +1,10 @@
-package com.senwata.user_microservice;
+package com.template.config_server;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class UserMicroserviceApplicationTests {
+class ConfigServerApplicationTests {
 
 	@Test
 	void contextLoads() {

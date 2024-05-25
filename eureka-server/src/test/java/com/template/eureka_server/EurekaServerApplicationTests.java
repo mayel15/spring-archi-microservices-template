@@ -1,4 +1,4 @@
-package com.senwata.eureka_server;
+package com.template.eureka_server;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

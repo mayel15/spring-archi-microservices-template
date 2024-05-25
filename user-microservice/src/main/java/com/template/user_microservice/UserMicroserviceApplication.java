@@ -1,4 +1,4 @@
-package com.senwata.user_microservice;
+package com.template.user_microservice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

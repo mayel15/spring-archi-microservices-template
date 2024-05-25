@@ -30,12 +30,12 @@ services:
 
   pgdb:
     image: postgres:16
-    container_name: db-senwata
+    container_name: db-template
     hostname: postgres_db
     environment:
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=postgres
-      - POSTGRES_DB=senwata
+      - POSTGRES_DB=template
       - POSTGRES_HOST_AUTH_METHOD=trust
     expose:
       - 5432
