@@ -1,6 +1,6 @@
 # 🩻 Spring Archi Microservices Template
 
-[![forthebadge](http://forthebadge.com/images/badges/built-with-love.svg)](https://github.com/mayel15/node-express-template)
+[![forthebadge](http://forthebadge.com/images/badges/built-with-love.svg)](https://github.com/mayel15/spring-archi-microservices-template)
 
 👨🏾‍💻 Pape THIAM [@mayel15](https://github.com/mayel15)
 
@@ -14,7 +14,7 @@
 - Eureka Server
 - APi Gateway
 
-# 📄 Description du projet
+# 📄 Description of the projet
 
 This is an opinionated boilerplate (template or skeleton, whatever you want) for SpringBoot architecture oriented microservices. This repository serves as a template to simplify the [creation of new repositories from it](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template).
 
